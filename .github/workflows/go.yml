@@ -37,4 +37,4 @@ jobs:
           file: ./cmd/s3driver/Dockerfile.full
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: tuomasv/csi-rclone:latest
+          tags: tuomasv/csi-s3:latest
