@@ -74,7 +74,7 @@ spec:
           operator: "Exists"
       containers:
         - name: csi-provisioner
-          image: quay.io/k8scsi/csi-provisioner:v2.1.0
+          image: longhornio/csi-provisioner:v2.1.2
           args:
             - "--csi-address=$(ADDRESS)"
             - "--v=4"
@@ -86,7 +86,7 @@ spec:
             - name: socket-dir
               mountPath: /var/lib/kubelet/plugins/ch.ctrox.csi.s3-driver
         - name: csi-s3
-          image: ctrox/csi-s3:v1.2.0-rc.2
+          image: tuomasv/csi-s3:latest
           args:
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--nodeid=$(NODE_ID)"
