@@ -56,7 +56,8 @@ spec:
         app: csi-s3
     spec:
       serviceAccount: csi-s3
-      hostNetwork: true
+#      hostNetwork: true
+# allow kube dns for internal minio s3 addressing *.svc.cluster.local
       containers:
         - name: driver-registrar
           image: longhornio/csi-node-driver-registrar:v2.3.0
