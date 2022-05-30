@@ -32,7 +32,7 @@ RUN ./autogen.sh && \
   make && \
   make install
 
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 LABEL maintainers="Cyrill Troxler <cyrilltroxler@gmail.com>"
 LABEL description="csi-s3 image"
 COPY --from=s3backer /usr/bin/s3backer /usr/bin/s3backer
