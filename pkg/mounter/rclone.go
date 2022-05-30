@@ -45,7 +45,7 @@ func (rclone *rcloneMounter) Mount(source string, target string) error {
 		fmt.Sprintf(":s3:%s", path.Join(rclone.meta.BucketName, rclone.meta.Prefix, rclone.meta.FSPath)),
 		fmt.Sprintf("%s", target),
 		"--daemon",
-		"--s3-provider=AWS",
+		"--s3-provider=Minio",
 		"--s3-env-auth=true",
 		fmt.Sprintf("--s3-region=%s", rclone.region),
 		fmt.Sprintf("--s3-endpoint=%s", rclone.url),
